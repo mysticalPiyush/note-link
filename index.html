@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteLink - Smart Code Storage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Note<span>Link</span></div>
+        <nav>
+            
+            <a href="#">GitHub</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <h1>Save & Retrieve Notes Smartly</h1>
+        <p>Store links or text and generate a unique, easy-to-remember code for quick retrieval.</p>
+        
+        <!-- SAVE SECTION -->
+        <div class="box">
+            <input type="text" id="inputText" placeholder="Paste your link or note here...">
+            <button class="cta" onclick="generateAndSave()">
+                <span>Generate Code</span>
+                <svg width="15px" height="15px" viewBox="0 0 13 10">
+                    <path d="M1 5h10M6 1l4 4-4 4"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="savedSection" class="hidden">
+            <div id="output"></div>
+        </div>
+
+        <!-- RETRIEVE SECTION -->
+        <div class="retrieve-section">
+            <h2>Retrieve Your Saved Data</h2>
+            <div class="box">
+                <input type="text" id="retrieveCode" placeholder="Enter your code...">
+                <button class="cta" onclick="retrieveData()">
+                    <span>Retrieve</span>
+                    <svg width="15px" height="15px" viewBox="0 0 13 10">
+                        <path d="M1 5h10M6 1l4 4-4 4"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="retrievedData"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
